@@ -1,2 +1,2 @@
-let ColorWheel = ["red","black","blue","yellow"];
+let ColorWheel = ["red","green","blue","yellow"];
 let CurrentColorWheel = [];

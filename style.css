@@ -1,0 +1,26 @@
+h1{
+    color:orange;
+    background-color: aquamarine;
+    margin: 60px;
+    justify-content: center;
+    text-align: center;
+    font-size: 100px;
+}
+.red,.black,.blue,.yellow{
+    height: 40px;
+    width:50px;
+    background-color:plum;
+    border-radius: 20px;
+    padding: 20px;
+    border: solid black ;
+    margin: 10px;
+    
+}
+.Simon-Box{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-around;
+   justify-content: center;
+   border: solid red;
+  
+}

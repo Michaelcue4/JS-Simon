@@ -1,3 +1,7 @@
+let game = document.querySelector("#");
+// document
+// console.log(game)
+
 let ColorWheel = ["red","green","blue","yellow"];
 let PlayerColorWheel = [];
 let CpuColorWheel = [];
@@ -14,7 +18,9 @@ const BlueChoice = document.getElementsByClassName("blue");
 const RedChoice = document.getElementsByClassName("red")
 const YellowChoice = document.getElementsByClassName("yellow");
 const easyButton = document.getElementById("easy");
-
+// const game = document.getElementById("gameStart");
+console.log(game)
+console.log(GreenChoice)
 // document.getElementById("easy").onClick = function(){
 // currentdiff = easy;
 // let currentDiffBack = this;
@@ -23,4 +29,8 @@ const easyButton = document.getElementById("easy");
 // document.getElementById("Hard").style.backgroundColor = "black";
 // }
 
-easyButton.addEventListener("click",(event)=>)
+// Startgame.addEventListener("click",(event)=>{
+//     gameOn = true;
+//     console.log("start");
+//     alert("start");
+// })

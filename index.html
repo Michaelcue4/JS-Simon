@@ -5,17 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <link rel="javascript" href="app.js">
+    <script scr = js/app.js></script>
     <title></title>
 </head>
 <body>
     <div>
-    <h1 id = gameStart> Simon Says </h1>
+    <h1 id = "mainGame"> Simon Says </h1>
         <div class = "Simon-Box">
             <div class = "red "></div>
             <div class = "green"></div>
             <div class = "yellow"></div>
             <div class = "blue"></div>
+        </div>
+        <div class = "menu">
+        <button class = "button" id = "gameStart"> Start </button>
+        <button class = "button" id = "Easy"> Easy </button>
+        <button class = "button" id = "Medium"> Medium</button>
+        <button class = "button" id = "Hard"> Hard</button>
+
+        </div>
+        <div class = "score">
+            <div class = "highscore"> High Score </div>
+            <div class = "currentScore"> Curent Score </div>
         </div>
     </div>
 </body>

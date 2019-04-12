@@ -5,6 +5,8 @@ h1 {
     justify-content: center;
     text-align: center;
     font-size: 100px;
+    
+    border: 15px double black;
 }
 .red,.green,.blue,.yellow{
    
@@ -23,7 +25,7 @@ h1 {
    justify-content: center;
    border: 5px double red;
    padding: 0x;
-   margin: 0 auto;
+   margin: 30px auto;
    background: black;
    align-self: center;
    border-radius: 130px 130px 130px 130px;
@@ -34,6 +36,7 @@ h1 {
     height: 60px;
     width:60px;
     border-radius: 160px 0px 0px 0px;
+    
     
 }
 .blue {
@@ -54,4 +57,23 @@ h1 {
     height: 60px;
     width:60px;
     border-radius: 0px 0px 0px 160px;
+}
+.menu{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    background: orange;
+    height: 15px;
+    width: 470px;
+    justify-content: space-between;
+    padding: 3px;
+}
+
+
+
+.button{
+    border: double black;
+    height: 60px 
 }

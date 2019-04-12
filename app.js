@@ -20,6 +20,4 @@ this.style.backgroundColor = "yellow";
 document.getElementById("Medium").style.backgroundColor = "black";
 document.getElementById("Hard").style.backgroundColor = "black";
 }
-function Startgame (){
-
-}
+startgam

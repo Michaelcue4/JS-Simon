@@ -77,3 +77,7 @@ h1 {
     border: double black;
     height: 60px 
 }
+.score
+{
+    background-position: center;
+}

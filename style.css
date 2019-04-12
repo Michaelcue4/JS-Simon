@@ -81,3 +81,7 @@ h1 {
 {
     background-position: center;
 }
+.startcolor{
+    background-color: yellow;
+    color:red;
+}

@@ -52,10 +52,10 @@ game.addEventListener("click",(event)=>{
 
 // Created Two functions to change the color and reset the color 
 function resetColor(){
-    GreenChoice  = document.getElementById("green");
-    BlueChoice = document.getElementById("blue");
-    RedChoice = document.getElementById("red");
-    YellowChoice = document.ggetElementById("yellow");
+    document.getElementById("green").className = "green";
+    document.getElementById("blue").className = "blue";
+    document.getElementById("red").className = "red";
+    document.getElementById("yellow").className ="yellow";
 }
 function ChangeColor(){
     document.getElementById("green").className= "green1";
@@ -128,8 +128,8 @@ function turn()
  {
      ChangeColor();
      setTimeout(()=>{
-        if(CpuColorWheel[currentTurn]=1)red()
-        if(CpuColorWheel[currentTurn]=2)blue()
+        if(CpuColorWheel[change]=1)red()
+        if(CpuColorWheel[change]=2)blue()
         if(CpuColorWheel[currentTurn]=3)yellow()
         if(CpuColorWheel[currentTurn]=4)green()
         currentTurn++;

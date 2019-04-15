@@ -25,6 +25,7 @@ const YellowChoice = document.getElementsByClassName("yellow");
 const easyButton = document.getElementById("easy");
 const game = document.getElementById("gameStart");
 
+
 game.addEventListener("click",(event)=>{
     gameOn = true;
 
@@ -34,11 +35,11 @@ game.addEventListener("click",(event)=>{
     {
         console.log("start");
         document.getElementsByClassName("green").className= "green1";
-
+        GamePlay();
     }
 })
 easyButton.addEventListener("click",(event)=>{
-    document.getElementsByClassName("button")[1].className= "startcolor";
+    document.getElementsByClassName("button")[0].className= "startcolor";
     return;
 })
 
@@ -73,20 +74,22 @@ function ChangeColor(){
 
 
 
-// BlueChoice.addEventListener('click', (event)=>{
+// BlueChoice.addEventListener('click', (event) => {
 // if(gameOn)
 // {
+//     console.log("blueworks");
 // PlayerColorWheel.push(1);
 // }
+// })
 
 // })
-// GreenChoice.addEventListener("click", (event)=>{
-//  if(gameOn)
-//  {
+GreenChoice.addEventListener('click',(event) =>{
+ if(gameOn)
+ {
+    console.log("things")
+ }
 
-//  }
-
-// })
+})
 // YellowChoice.addEventListener("click",(event)=>
 // {
 //     if(gameOn)
@@ -108,13 +111,9 @@ gameOn =true;
 function gameDone(){
     gameOn = false;
     win = true;
-    scoreTest();
-
-}
-function scoreTest(){
     if(currentScore >= highestScore)
     {
         highestScore = currentScore;
     }
-    else return highestScore;
+else highestScore = highestScore;
 }

@@ -2,7 +2,7 @@ document.querySelector('#gameStart').onclick = () => {
     console.log("Hello World");
 };
 
-let ColorWheel = ["red","green","blue","yellow"];
+let ColorWheel = [0,1,2,3];
 let PlayerColorWheel = [];
 let CpuColorWheel = [];
 const easy = 1000;
@@ -19,12 +19,12 @@ let highestScore = 0;
 
 
 const GreenChoice  = document.getElementById("green");
-const BlueChoice = document.getElementsByClassName("blue");
+const BlueChoice = document.getElementById("blue");
 const RedChoice = document.getElementById("red");
-const YellowChoice = document.getElementsByClassName("yellow");
+const YellowChoice = document.getElementById("yellow");
 const easyButton = document.getElementById("easy");
 const game = document.getElementById("gameStart");
-
+// More Event listeners
 
 game.addEventListener("click",(event)=>{
     gameOn = true;
@@ -34,7 +34,10 @@ game.addEventListener("click",(event)=>{
     if(gameOn)
     {
         console.log("start");
-        document.getElementsByClassName("green").className= "green1";
+        document.getElementById("green").className= "green1";
+        document.getElementById("red").className= "red1"
+        document.getElementById("yellow").className= "yellow1"
+        document.getElementById("blue").className= "blue1"
         GamePlay();
     }
 })
@@ -43,46 +46,32 @@ easyButton.addEventListener("click",(event)=>{
     return;
 })
 
-// let z = new Promise((resolve,reject)=>{
-// let a = 1+1;
-// if( a == 2)
-// { 
-//     console.log("things");
-    
-//     resolve("success");
-// }
-// else{
-//     reject(failed);
-// }
-//})
-
 // Created Two functions to change the color and reset the color 
 function resetColor(){
     GreenChoice  = document.getElementById("green");
-    BlueChoice = document.getElementsByClassName("blue");
+    BlueChoice = document.getElementById("blue");
     RedChoice = document.getElementById("red");
-    YellowChoice = document.getElementsByClassName("yellow");
+    YellowChoice = document.ggetElementById("yellow");
 }
 function ChangeColor(){
-    document.getElementsByClassName("green").className= "green1";
-    document.getElementsByClassName("red").className = "red1";
-    document.getElementsByClassName("yellow").className = "yellow1";
-    document.getElementsByClassName("blue").className = "blue1";
+    document.getElementById("green").className= "green1";
+    document.getElementById("red").className = "red1";
+    document.getElementById("yellow").className = "yellow1";
+    document.getElementById("blue").className = "blue1";
 }
 
 
+//Event listeners 
 
 
+BlueChoice.addEventListener('click', (event) => {
+if(gameOn)
+{
+    console.log("blueworks");
+PlayerColorWheel.push(1);
+}
+})
 
-// BlueChoice.addEventListener('click', (event) => {
-// if(gameOn)
-// {
-//     console.log("blueworks");
-// PlayerColorWheel.push(1);
-// }
-// })
-
-// })
 GreenChoice.addEventListener('click',(event) =>{
  if(gameOn)
  {
@@ -90,27 +79,32 @@ GreenChoice.addEventListener('click',(event) =>{
  }
 
 })
-// YellowChoice.addEventListener("click",(event)=>
-// {
-//     if(gameOn)
-//     {
+YellowChoice.addEventListener("click",(event)=>
+{
+    if(gameOn)
+    {
+        console.log("yellow works");
+    }
+})
+RedChoice.addEventListener("click", (event)=>{
+if(gameOn){
+    console.log("red works");
+}
 
-//     }
-// })
-// RedChoice.addEventListener("click", (event)=>{
-
-
-// })
-// function colorChange(){
-
-// }
+})
+//game function
 function GamePlay(){
-gameOn =true;
+gameOn =false;
+for (var i =0; i<5;i++){
+    CpuColorWheel.push((Math.floor(Math.random() * 4) + 1))
+
+}
 
 }
 function gameDone(){
     gameOn = false;
     win = true;
+
     if(!gameon)
     {
         document.getElementsByClassName("button")[0].className= "button";

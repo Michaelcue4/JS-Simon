@@ -8,7 +8,7 @@ h1 {
     
     border: 15px double black;
 }
-.red,#green,.blue,.yellow{
+#red,#green,#blue,#yellow{
    
     padding: 30px;
     border: solid black;
@@ -31,7 +31,7 @@ h1 {
    border-radius: 130px 130px 130px 130px;
   
 }
-.red{
+#red{
     background: red;
     height: 60px;
     width:60px;
@@ -40,7 +40,7 @@ h1 {
     
     
 }
-.blue {
+#blue {
     background: blue;
     height: 60px;
     width:60px;
@@ -54,7 +54,7 @@ h1 {
     border-radius: 0px 160px 0px 0px;
     
 }
-.yellow
+#yellow
 {
     background: yellow;
     height: 60px;

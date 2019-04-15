@@ -112,10 +112,10 @@ for (var i =0; i<5;i++)
     CpuColorWheel.push((Math.floor(Math.random() * 4) + 1))
 
     }
-cpuMove = true;
+    cpuMove = true;
+    intervaltime = setInterval(turn,600);
 
-
-}
+    }
 function turn()
 {
  if(change ==currentTurn)
@@ -126,12 +126,14 @@ function turn()
  }
  if(cpuMove)
  {
-     resetColor();
+     ChangeColor();
      setTimeout(()=>{
-        if(CpuColorWheel[change]=1)red()
-        if(CpuColorWheel[change]=2)blue()
-        if(CpuColorWheel[change]=3)yellow()
-        if(CpuColorWheel[change]=4)green(),300})
+        if(CpuColorWheel[currentTurn]=1)red()
+        if(CpuColorWheel[currentTurn]=2)blue()
+        if(CpuColorWheel[currentTurn]=3)yellow()
+        if(CpuColorWheel[currentTurn]=4)green()
+        currentTurn++;
+     },300)
      
  }
 }

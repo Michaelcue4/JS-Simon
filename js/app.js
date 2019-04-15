@@ -14,6 +14,8 @@ let currentDiffBack;
 let Startcolor;
 let Diffselect = false;
 let win = false;
+let currentScore = 0;
+let highestScore = 0;
 
 
 const GreenChoice  = document.getElementsByClassName("green");
@@ -100,10 +102,19 @@ function ChangeColor(){
 
 // }
 function GamePlay(){
+gameOn =true;
 
 }
 function gameDone(){
     gameOn = false;
     win = true;
+    scoreTest();
 
+}
+function scoreTest(){
+    if(currentScore >= highestScore)
+    {
+        highestScore = currentScore;
+    }
+    else return highestScore;
 }

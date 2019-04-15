@@ -34,4 +34,65 @@ easyButton.addEventListener("click",(event)=>{
     return;
 })
 
+// let z = new Promise((resolve,reject)=>{
+// let a = 1+1;
+// if( a == 2)
+// { 
+//     console.log("things");
+    
+//     resolve("success");
+// }
+// else{
+//     reject(failed);
+// }
+//})
 
+// Created Two functions to change the color and reset the color 
+function resetColor(){
+    GreenChoice  = document.getElementsByClassName("green");
+    BlueChoice = document.getElementsByClassName("blue");
+    RedChoice = document.getElementsByClassName("red")
+    YellowChoice = document.getElementsByClassName("yellow");
+}
+function ChangeColor(){
+    document.getElementsByClassName("green").className= "green1";
+    document.getElementsByClassName("red").className = "red1";
+    document.getElementsByClassName("yellow").className = "yellow1";
+    document.getElementsByClassName("blue").className = "blue1";
+}
+
+
+
+
+
+BlueChoice.addEventListener('click', (event)=>{
+if(gameOn)
+{
+PlayerColorWheel.push(1);
+}
+
+})
+GreenChoice.addEventListener("click", (event)=>{
+ if(gameOn)
+ {
+
+ }
+
+})
+YellowChoice.addEventListener("click",(event)=>
+{
+    if(gameOn)
+    {
+
+    }
+})
+RedChoice.addEventListener("click", (event)=>{
+
+
+})
+// function colorChange(){
+
+// }
+function GamePlay(){
+
+}

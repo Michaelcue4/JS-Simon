@@ -78,7 +78,7 @@ h1 {
 
 
 .button{
-    border: double black;
+    border: black;
     height: 60px 
 }
 .score
@@ -88,4 +88,20 @@ h1 {
 .startcolor{
     background-color: yellow;
     color:red;
+}
+.red1{
+    background-color: red;
+    opacity: .6;
+}
+.blue1{
+    background-color: blue;
+    opacity: .6;
+}
+.yellow1{
+    background-color: yellow;
+    opacity: .6;
+}
+.green1{
+    background-color: green;
+    opacity:.6;
 }

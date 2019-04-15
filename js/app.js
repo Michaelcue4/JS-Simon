@@ -13,6 +13,7 @@ let gameOn = false;
 let currentDiffBack; 
 let Startcolor;
 let Diffselect = false;
+let win = false;
 
 
 const GreenChoice  = document.getElementsByClassName("green");
@@ -26,11 +27,16 @@ game.addEventListener("click",(event)=>{
     gameOn = true;
 
     document.getElementsByClassName("button")[0].className= "startcolor";
-    console.log("start");
+    
+    if(gameOn)
+    {
+        console.log("start");
+        document.getElementsByClassName("green").className= "green1";
 
+    }
 })
 easyButton.addEventListener("click",(event)=>{
-    document.getElementsByClassName("button")[0].className= "startcolor";
+    document.getElementsByClassName("button")[1].className= "startcolor";
     return;
 })
 
@@ -65,34 +71,39 @@ function ChangeColor(){
 
 
 
-BlueChoice.addEventListener('click', (event)=>{
-if(gameOn)
-{
-PlayerColorWheel.push(1);
-}
+// BlueChoice.addEventListener('click', (event)=>{
+// if(gameOn)
+// {
+// PlayerColorWheel.push(1);
+// }
 
-})
-GreenChoice.addEventListener("click", (event)=>{
- if(gameOn)
- {
+// })
+// GreenChoice.addEventListener("click", (event)=>{
+//  if(gameOn)
+//  {
 
- }
+//  }
 
-})
-YellowChoice.addEventListener("click",(event)=>
-{
-    if(gameOn)
-    {
+// })
+// YellowChoice.addEventListener("click",(event)=>
+// {
+//     if(gameOn)
+//     {
 
-    }
-})
-RedChoice.addEventListener("click", (event)=>{
+//     }
+// })
+// RedChoice.addEventListener("click", (event)=>{
 
 
-})
+// })
 // function colorChange(){
 
 // }
 function GamePlay(){
+
+}
+function gameDone(){
+    gameOn = false;
+    win = true;
 
 }

@@ -38,10 +38,10 @@ game.addEventListener("click",(event)=>{
     if(gameOn)
     {
         console.log("start");
-        document.getElementById("green").className= "green1";
-        document.getElementById("red").className= "red1"
-        document.getElementById("yellow").className= "yellow1"
-        document.getElementById("blue").className= "blue1"
+        // document.getElementById("green").className= "green1";
+        // document.getElementById("red").className= "red1"
+        // document.getElementById("yellow").className= "yellow1"
+        // document.getElementById("blue").className= "blue1"
         GamePlay();
     }
 })

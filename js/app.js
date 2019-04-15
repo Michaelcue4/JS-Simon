@@ -14,8 +14,12 @@ let currentDiffBack;
 let Startcolor;
 let Diffselect = false;
 let win = false;
+let change =0;
 let currentScore = 0;
 let highestScore = 0;
+let cpuMove = false;
+let cputurn;
+let playerturn;
 
 
 const GreenChoice  = document.getElementById("green");
@@ -27,8 +31,8 @@ const game = document.getElementById("gameStart");
 // More Event listeners
 
 game.addEventListener("click",(event)=>{
+    
     gameOn = true;
-
     document.getElementsByClassName("button")[0].className= "startcolor";
     
     if(gameOn)
@@ -66,17 +70,17 @@ function ChangeColor(){
 
 BlueChoice.addEventListener('click', (event) => {
 if(gameOn)
-{
+    {
     console.log("blueworks");
 PlayerColorWheel.push(1);
-}
+    }
 })
 
 GreenChoice.addEventListener('click',(event) =>{
  if(gameOn)
- {
+    {
     console.log("things")
- }
+    }
 
 })
 YellowChoice.addEventListener("click",(event)=>
@@ -87,20 +91,31 @@ YellowChoice.addEventListener("click",(event)=>
     }
 })
 RedChoice.addEventListener("click", (event)=>{
-if(gameOn){
+if(gameOn)
+    {
     console.log("red works");
-}
+    }
 
 })
 //game function
 function GamePlay(){
 gameOn =false;
-for (var i =0; i<5;i++){
+for (var i =0; i<5;i++)
+    {
     CpuColorWheel.push((Math.floor(Math.random() * 4) + 1))
 
-}
+    }
+cpuMove = true;
+
 
 }
+function turn()
+{
+ if(change == )
+}
+
+
+///////////////////
 function gameDone(){
     gameOn = false;
     win = true;
@@ -113,5 +128,5 @@ function gameDone(){
     {
         highestScore = currentScore;
     }
-else highestScore = highestScore;
+    else highestScore = highestScore;
 }

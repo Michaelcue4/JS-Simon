@@ -18,9 +18,9 @@ let currentScore = 0;
 let highestScore = 0;
 
 
-const GreenChoice  = document.getElementsByClassName("green");
+const GreenChoice  = document.getElementById("green");
 const BlueChoice = document.getElementsByClassName("blue");
-const RedChoice = document.getElementsByClassName("red")
+const RedChoice = document.getElementById("red");
 const YellowChoice = document.getElementsByClassName("yellow");
 const easyButton = document.getElementById("easy");
 const game = document.getElementById("gameStart");
@@ -58,9 +58,9 @@ easyButton.addEventListener("click",(event)=>{
 
 // Created Two functions to change the color and reset the color 
 function resetColor(){
-    GreenChoice  = document.getElementsByClassName("green");
+    GreenChoice  = document.getElementById("green");
     BlueChoice = document.getElementsByClassName("blue");
-    RedChoice = document.getElementsByClassName("red")
+    RedChoice = document.getElementById("red");
     YellowChoice = document.getElementsByClassName("yellow");
 }
 function ChangeColor(){
@@ -111,6 +111,10 @@ gameOn =true;
 function gameDone(){
     gameOn = false;
     win = true;
+    if(!gameon)
+    {
+        document.getElementsByClassName("button")[0].className= "button";
+    }
     if(currentScore >= highestScore)
     {
         highestScore = currentScore;

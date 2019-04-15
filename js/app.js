@@ -12,10 +12,10 @@ let currentdiff = 0;
 let gameOn = false;
 let currentDiffBack; 
 let Startcolor;
-let Diffselect = false;
+let On = false;
 let win = false;
 let change =0;
-let currentScore = 0;
+let currentTurn = 0;
 let highestScore = 0;
 let cpuMove = false;
 let cputurn;
@@ -45,10 +45,10 @@ game.addEventListener("click",(event)=>{
         GamePlay();
     }
 })
-easyButton.addEventListener("click",(event)=>{
-    document.getElementsByClassName("button")[0].className= "startcolor";
-    return;
-})
+// easyButton.addEventListener("click",(event)=>{
+//     document.getElementsByClassName("button")[0].className= "startcolor";
+//     return;
+// })
 
 // Created Two functions to change the color and reset the color 
 function resetColor(){
@@ -69,37 +69,40 @@ function ChangeColor(){
 
 
 BlueChoice.addEventListener('click', (event) => {
-if(gameOn)
+if(On)
     {
     console.log("blueworks");
-PlayerColorWheel.push(1);
+PlayerColorWheel.push(2);
     }
 })
 
 GreenChoice.addEventListener('click',(event) =>{
- if(gameOn)
+ if(On)
     {
-    console.log("things")
+        PlayerColorWheel.push(4);
+        console.log("things")
     }
 
 })
 YellowChoice.addEventListener("click",(event)=>
 {
-    if(gameOn)
+    if(On)
     {
+        PlayerColorWheel.push(3);
         console.log("yellow works");
     }
 })
 RedChoice.addEventListener("click", (event)=>{
-if(gameOn)
+if(On)
     {
+    PlayerColorWheel.push(1);
     console.log("red works");
     }
 
 })
 //game function
 function GamePlay(){
-gameOn =false;
+On =true;
 for (var i =0; i<5;i++)
     {
     CpuColorWheel.push((Math.floor(Math.random() * 4) + 1))
@@ -111,16 +114,46 @@ cpuMove = true;
 }
 function turn()
 {
- if(change == )
+ if(change ==currentTurn)
+ {
+    resetColor();
+    cpuMove=false;
+    on=true;
+ }
+ if(cpuMove)
+ {
+     resetColor();
+     setTimeout(()=>{
+        if(CpuColorWheel[change]=1)red()
+        if(CpuColorWheel[change]=2)blue()
+        if(CpuColorWheel[change]=3)yellow()
+        if(CpuColorWheel[change]=4)green(),300})
+     
+ }
 }
-
+function red()
+    {
+        document.getElementById("red").className = "red1";
+    }
+function blue()
+    {
+        document.getElementById("blue").className = "blue1";
+    }
+function green()
+    {
+        document.getElementById("green").className= "green1"
+    }
+function yellow()
+    {
+        document.getElementById("yellow").className= "yellow1"
+    }
 
 ///////////////////
 function gameDone(){
     gameOn = false;
     win = true;
 
-    if(!gameon)
+    if(!gameOn)
     {
         document.getElementsByClassName("button")[0].className= "button";
     }

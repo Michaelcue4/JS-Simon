@@ -113,8 +113,7 @@ for (var i =0; i<5;i++)
 
     }
     cpuMove = true;
-    intervaltime = setInterval(turn,600);
-
+    intervaltime = setInterval(turn,700);
     }
 function turn()
 {
@@ -128,14 +127,20 @@ function turn()
  {
      ChangeColor();
      setTimeout(()=>{
-        if(CpuColorWheel[change]=1)red()
-        if(CpuColorWheel[change]=2)blue()
-        if(CpuColorWheel[currentTurn]=3)yellow()
-        if(CpuColorWheel[currentTurn]=4)green()
-        currentTurn++;
+        if(ColorWheel[change]=1)red()
+        if(ColorWheel[change]=2)blue()
+        if(ColorWheel[change]=3)yellow()
+        if(ColorWheel[change]=4)green()
+        change++;
      },300)
      
  }
+}
+function pickcolor()
+{
+    cpuMove = true;
+    randomColor = ColorWheel[Math.floor(Math.random() * ColorWheel.length)]
+    CpuColorWheel.push(randomColor);
 }
 function red()
     {

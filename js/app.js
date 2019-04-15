@@ -60,14 +60,32 @@ function resetColor()
 
         clearInterval(intervaltime);
     }
-function ChangeColor()
+function ChangeGreenColor()
     {
-        console.log("Why me")
-        document.getElementById("green").className= "green1";
+        console.log("why must things break");
+        document.getElementById("green").className = "green1";
+        setTimeout(function() {resetColor()}, 400)
+    }   
+function ChangeRedColor()
+    {
+        console.log("red changed");
         document.getElementById("red").className = "red1";
+        setTimeout(function() {resetColor()}, 400)
+    }
+function ChangeYellowColor()
+    {   
+        console.log("Yellow change");
         document.getElementById("yellow").className = "yellow1";
+        setTimeout(function() {resetColor()}, 400)
+    }   
+function ChangeblueColor()
+    {
+        console.log("blue change")
+        // document.getElementById("green").className= "green1";
+        // document.getElementById("red").className = "red1";
+        // document.getElementById("yellow").className = "yellow1";
         document.getElementById("blue").className = "blue1";
-        setTimeout(function() {resetColor()}, 800)
+        setTimeout(function() {resetColor()}, 400)
     }
             //Event listeners 
 BlueChoice.addEventListener('click', (event) => 
@@ -77,7 +95,7 @@ BlueChoice.addEventListener('click', (event) =>
                 console.log("blueworks");
                 PlayerColorWheel.push(2);
                 blue();
-                setInterval(resetColor(),6000)
+                setTimeout(function(){resetColor()},400);
             }
     }   
 )
@@ -85,12 +103,12 @@ BlueChoice.addEventListener('click', (event) =>
 GreenChoice.addEventListener('click',(event) =>
     {
         if(On)
-            {
-                PlayerColorWheel.push(4);
-                console.log("things")
-                green();
-                setInterval(resetColor(),18000)
-            }
+        {
+            PlayerColorWheel.push(4);
+            console.log("things")
+            green();
+            setTimeout(function(){resetColor()},400);
+        }
 
     }   
 )
@@ -101,7 +119,7 @@ YellowChoice.addEventListener("click",(event)=>
             PlayerColorWheel.push(3);
             console.log("yellow works");
             yellow();
-            setInterval(resetColor(),18000)
+            setTimeout(function(){resetColor()},400);
         }
     }
 )
@@ -112,7 +130,7 @@ RedChoice.addEventListener("click", (event)=>
             PlayerColorWheel.push(1);
             console.log("red works");
             red();
-            setInterval(resetColor(),18000)
+            setTimeout(function(){resetColor()},400);
         }
     }
 )
@@ -122,18 +140,34 @@ function GamePlay()
     On =true;
     for (var i =0; i<5;i++)
         {
-            // cpuRan = ((Math.floor(Math.random() * 4) + 1))
-            cpuRan=1;
-            if(cpuRan = 1)
-            {
+            cpuRan = ((Math.floor(Math.random() * 4) + 1));
+            // cpuRan = 2;
+            if(cpuRan = 2)
+            {   
+                blue();
+                ChangeblueColor();
+            }
+            else if(cpuRan = 1)
+            {   
                 red();
+                ChangeRedColor();
+            }
+            else if(cpuRan = 3)
+            {   
+                green();
+                ChangeGreenColor();
+            }
+            else if(cpuRan = 4)
+            {   
+                yellow();
+                ChangeYellowColor();
             }
             CpuColorWheel.push(cpuRan);
             console.log(CpuColorWheel)
         
         }
     cpuMove = true;
-    intervaltime = setInterval(turn(),700);
+    setTimeout(function() {resetColor()}, 400);
     
 }
 function turn()
@@ -141,9 +175,9 @@ function turn()
         console.log("the sounds of slience")
         if(change == currentTurn)
         {   
-            ChangeColor();
-            // setInterval(resetColor(), 3000)
-            clearTimeout(intervaltime);
+            // ChangeColor();
+            // // setInterval(resetColor(), 3000)
+            // clearTimeout(intervaltime);
             cpuMove=false;
             on=true;
         }

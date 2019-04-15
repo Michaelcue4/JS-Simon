@@ -72,7 +72,8 @@ BlueChoice.addEventListener('click', (event) => {
 if(On)
     {
     console.log("blueworks");
-PlayerColorWheel.push(2);
+    PlayerColorWheel.push(2);
+    blue();
     }
 })
 
@@ -81,6 +82,7 @@ GreenChoice.addEventListener('click',(event) =>{
     {
         PlayerColorWheel.push(4);
         console.log("things")
+        green();
     }
 
 })
@@ -90,6 +92,7 @@ YellowChoice.addEventListener("click",(event)=>
     {
         PlayerColorWheel.push(3);
         console.log("yellow works");
+        yellow();
     }
 })
 RedChoice.addEventListener("click", (event)=>{
@@ -97,6 +100,7 @@ if(On)
     {
     PlayerColorWheel.push(1);
     console.log("red works");
+    red();
     }
 
 })

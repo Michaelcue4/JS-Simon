@@ -20,7 +20,7 @@ let highestScore = 0;
 let cpuMove = false;
 let cputurn;
 let playerturn;
-
+//Defined Constants and Variables 
 
 const GreenChoice  = document.getElementById("green");
 const BlueChoice = document.getElementById("blue");
@@ -127,11 +127,11 @@ function turn()
  {
      ChangeColor();
      setTimeout(()=>{
-        if(ColorWheel[change]=1)red()
-        if(ColorWheel[change]=2)blue()
-        if(ColorWheel[change]=3)yellow()
-        if(ColorWheel[change]=4)green()
-        change++;
+        if(ColorWheel[currentTurn]=1)red()
+        if(ColorWheel[currentTurn]=2)blue()
+        if(ColorWheel[currentTurn]=3)yellow()
+        if(ColorWheel[currentTurn]=4)green()
+        currentTurn++;
      },300)
      
  }

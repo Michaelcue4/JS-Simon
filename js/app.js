@@ -280,3 +280,10 @@
 //     }
 //     else highestScore = highestScore;
 // }
+
+
+let allMoves = [$('#red'), $('#green'), $('#yellow'), $('#blue')];
+let botMoves = [];
+let score = 0;
+let playerTurn = false;
+let playerMoves = [];

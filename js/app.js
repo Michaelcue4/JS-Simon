@@ -138,52 +138,61 @@ RedChoice.addEventListener("click", (event)=>
 function GamePlay()
 {
     On =true;
-    for (var i =0; i<5;i++)
+    computerAdd()
+    for (var i =0; i<CpuColorWheel.length;i++)
         {
-            CpuColorWheel.push(Math.floor(Math.random() * 4));
+            // cpuRan = (Math.floor(Math.random() * 4));
+            // cpuMove = true;
+            // intervaltime = setInterval(turn,200);
+            console.log(CpuColorWheel);
+            setTimeout(function(){
             if(cpuRan === 0)
             {   
-                blue();
+                // blue();
                 ChangeblueColor();
             }
             else if(cpuRan === 1)
             {   
-                red();
+                // red();
                 ChangeRedColor();
             }
             else if(cpuRan === 3)
             {   
-                green();
+                // green();
                 ChangeGreenColor();
             }
             else if(cpuRan === 2)
             {   
-                yellow();
+                // yellow();
                 ChangeYellowColor();
             }
+        },900)
             // CpuColorWheel.push(cpuRan);
             console.log(CpuColorWheel)
-        
+            // CpuColorWheel.push(cpuRan)
         }
-    cpuMove = true;
-    console.log(PlayerColorWheel);
-    setTimeout(function() {resetColor()}, 400);
+    // setTimeout(function() {resetColor()}, 400);
     
+}
+function computerAdd(){
+    cpuRan = (Math.floor(Math.random() * 4));
+    CpuColorWheel.push(cpuRan)
 }
 function turn()
     {
         console.log("turn")
+        on = false;
         if(change == currentTurn)
         {   
             // ChangeColor();
-            // // setInterval(resetColor(), 3000)
-            // clearTimeout(intervaltime);
+            setInterval(resetColor(), 3000)
+            clearInterval(intervaltime);
             cpuMove=false;
             on=true;
         }
         else if(cpuMove)
         {
-            ChangeColor();
+            // ChangeColor();
             console.log("cpu Move change color ");
             setTimeout(()=>
             {
@@ -192,7 +201,7 @@ function turn()
                 if(CpuColorWheel[currentTurn]=3)yellow()
                 if(CpuColorWheel[currentTurn]=4)green()
                 currentTurn++;
-            },300)
+            },800)
      
         }
     }

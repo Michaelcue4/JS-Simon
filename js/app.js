@@ -21,7 +21,7 @@ let cpuMove = false;
 let cputurn;
 let playerturn;
 let cpuRan = 0;
-let intervaltime=0;
+let intervaltime;
             //Defined Constants and Variables 
 
 const GreenChoice  = document.getElementById("green");
@@ -52,31 +52,31 @@ game.addEventListener("click",(event)=>
 function resetColor()
     {
         
-        console.log('HELLO FUCKOS')
+        console.log('resetcolor')
         document.getElementById("green").className = "green";
         document.getElementById("blue").className = "blue";
         document.getElementById("red").className = "red";
         document.getElementById("yellow").className ="yellow";
 
-        clearInterval(intervaltime);
+        // clearInterval(intervaltime);
     }
 function ChangeGreenColor()
     {
-        console.log("why must things break");
+        console.log("changeGreen");
         document.getElementById("green").className = "green1";
-        setTimeout(function() {resetColor()}, 400)
+        setTimeout(function() {resetColor()}, 900)
     }   
 function ChangeRedColor()
     {
         console.log("red changed");
         document.getElementById("red").className = "red1";
-        setTimeout(function() {resetColor()}, 400)
+        setTimeout(function() {resetColor()}, 900)
     }
 function ChangeYellowColor()
     {   
         console.log("Yellow change");
         document.getElementById("yellow").className = "yellow1";
-        setTimeout(function() {resetColor()}, 400)
+        setTimeout(function() {resetColor()}, 900)
     }   
 function ChangeblueColor()
     {
@@ -85,7 +85,7 @@ function ChangeblueColor()
         // document.getElementById("red").className = "red1";
         // document.getElementById("yellow").className = "yellow1";
         document.getElementById("blue").className = "blue1";
-        setTimeout(function() {resetColor()}, 400)
+        setTimeout(function() {resetColor()}, 900)
     }
             //Event listeners 
 BlueChoice.addEventListener('click', (event) => 
@@ -140,39 +140,39 @@ function GamePlay()
     On =true;
     for (var i =0; i<5;i++)
         {
-            cpuRan = ((Math.floor(Math.random() * 4) + 1));
-            // cpuRan = 2;
-            if(cpuRan = 2)
+            CpuColorWheel.push(Math.floor(Math.random() * 4));
+            if(cpuRan === 0)
             {   
                 blue();
                 ChangeblueColor();
             }
-            else if(cpuRan = 1)
+            else if(cpuRan === 1)
             {   
                 red();
                 ChangeRedColor();
             }
-            else if(cpuRan = 3)
+            else if(cpuRan === 3)
             {   
                 green();
                 ChangeGreenColor();
             }
-            else if(cpuRan = 4)
+            else if(cpuRan === 2)
             {   
                 yellow();
                 ChangeYellowColor();
             }
-            CpuColorWheel.push(cpuRan);
+            // CpuColorWheel.push(cpuRan);
             console.log(CpuColorWheel)
         
         }
     cpuMove = true;
+    console.log(PlayerColorWheel);
     setTimeout(function() {resetColor()}, 400);
     
 }
 function turn()
     {
-        console.log("the sounds of slience")
+        console.log("turn")
         if(change == currentTurn)
         {   
             // ChangeColor();
@@ -184,7 +184,7 @@ function turn()
         else if(cpuMove)
         {
             ChangeColor();
-            console.log("i am here");
+            console.log("cpu Move change color ");
             setTimeout(()=>
             {
                 if(CpuColorWheel[currentTurn]=1)red()

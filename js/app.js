@@ -304,3 +304,29 @@ function botMakesMove(move, interval){
         move.fadeTo(1000, 1);
     }, interval);
 }
+function wrongMove(){
+    score--;
+    $('#gameStart').show();
+}
+
+$('#gameStart').click(e => {
+    e.preventDefault();
+    botsTurn();
+    playerTurn = true;
+    $('#gameStart').hide(); 
+});
+allMoves.forEach(move => {
+    move.click(() => {
+        if(playerTurn === true){
+            playerMoves.push(move);
+
+            if(playerMoves[playerMoves.length - 1] !== botMoves[playerMoves.length - 1])
+                wrongMove();
+ 
+            if(playerMoves.length === botMoves.length && playerMoves[playerMoves.length - 1] === botMoves[playerMoves.length - 1]){
+                score++;
+                botsTurn();         
+            }
+        }
+    }); 
+});

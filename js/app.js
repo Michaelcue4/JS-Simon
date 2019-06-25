@@ -305,9 +305,11 @@ function botMakesMove(move, interval){
     }, interval);
 }
 function wrongMove(){
-    score--;
+    // score--;
     $('#end1').show();
     $('#gameStart').show();
+    document.querySelector("#score > .currentScore").innerText = score;
+
 }
 
 $('#gameStart').click(e => {

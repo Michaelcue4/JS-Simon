@@ -287,3 +287,13 @@ let botMoves = [];
 let score = 0;
 let playerTurn = false;
 let playerMoves = [];
+
+function botsTurn(){
+    let interval = 2000;
+    botMoves.push(allMoves[Math.floor(Math.random() * allMoves.length)]);
+    playerMoves = [];
+    botMoves.forEach(move => {
+        botMakesMove(move, interval);
+        interval += 2000;
+    });
+}

@@ -297,3 +297,10 @@ function botsTurn(){
         interval += 2000;
     });
 }
+
+function botMakesMove(move, interval){
+    setTimeout(() => {
+        move.fadeTo(1000, .5);
+        move.fadeTo(1000, 1);
+    }, interval);
+}

@@ -306,6 +306,7 @@ function botMakesMove(move, interval){
 }
 function wrongMove(){
     score--;
+    $('#end1').show();
     $('#gameStart').show();
 }
 
@@ -314,6 +315,7 @@ $('#gameStart').click(e => {
     botsTurn();
     playerTurn = true;
     $('#gameStart').hide(); 
+    $('#end1').hide();
 });
 allMoves.forEach(move => {
     move.click(() => {

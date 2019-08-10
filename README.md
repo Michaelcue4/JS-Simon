@@ -1,6 +1,6 @@
 
 
-##Simon Says 
+#Simon Says 
 Tried to create a simple iteration of simon says
 live site:https://michaelcue4.github.io/Project_1-Simon/
 

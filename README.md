@@ -10,10 +10,6 @@ https://trello.com/b/BsKLQznP/project-1-simon-says
 # Technologies Used:
 Html, Javascript, CSS
 
-
-# Features:
-
-
 # Whiteboarding
 https://i.imgur.com/xY1Qc2M.jpg
 
